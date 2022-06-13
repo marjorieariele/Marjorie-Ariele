@@ -1,0 +1,1 @@
+{"schema_type": "confusion_matrix", "schema_version": "1.0.0", "data": {"class_labels": ["CPT", "FATAL", "SAA", "SPT"], "matrix": [[0, 0, 145, 4], [0, 0, 7, 1], [6, 1, 1548, 30], [1, 0, 369, 5]]}}
