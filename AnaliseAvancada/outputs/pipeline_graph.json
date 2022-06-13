@@ -1,0 +1,82 @@
+{
+    "schema_name": "pipeline_graph",
+    "schema_version": "1.0.0",
+    "data": {
+        "module_nodes": {
+            "32d59b96": {
+                "node_id": "32d59b96",
+                "name": "MaxAbsScaler",
+                "status": "model"
+            },
+            "0fc8c08b": {
+                "node_id": "0fc8c08b",
+                "name": "XGBoostClassifier",
+                "status": "model"
+            },
+            "f361fff1": {
+                "node_id": "f361fff1",
+                "name": "Ignore",
+                "status": "dataType"
+            },
+            "cd404c9d": {
+                "node_id": "cd404c9d",
+                "name": "Categorical",
+                "status": "dataType"
+            },
+            "cdc17987": {
+                "node_id": "cdc17987",
+                "name": "StringCast-CharGramCountVectorizer",
+                "status": "operation"
+            }
+        },
+        "edges": [
+            {
+                "source_node_id": "32d59b96",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "0fc8c08b",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "1362021e",
+                "source_node_name": "data_source",
+                "source_name": "",
+                "target_name": "1 col",
+                "dst_node_id": "f361fff1",
+                "dst_node_name": "Ignore"
+            },
+            {
+                "source_node_id": "1362021e",
+                "source_node_name": "data_source",
+                "source_name": "",
+                "target_name": "2 col",
+                "dst_node_id": "cd404c9d",
+                "dst_node_name": "Categorical"
+            },
+            {
+                "source_node_id": "cd404c9d",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "cdc17987",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "cdc17987",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "64 col",
+                "dst_node_id": "32d59b96",
+                "dst_node_name": ""
+            }
+        ],
+        "child_runs": [],
+        "datasource_nodes": {
+            "1362021e": {
+                "node_id": "1362021e",
+                "name": "data_source - 3 col"
+            }
+        }
+    }
+}
